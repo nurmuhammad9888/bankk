@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="./js/face-api.min.js"></script>
+</head>
+<body>
+    <!-- SITE MAIN START -->
+    <main class="site-main">
+        <!-- HERO SECTION START -->
+        <section class="hero">
+            <div class="hero-left">
+                
+            </div>
+            <div class="container">
+                <form class="user-form" action="#" method="post">
+                    <h2 class="form-title">Registratsiya</h2>
+                    <span class="user-warning"></span>
+                    <div class="user-info">
+                        <label>
+                            Ismingiz
+                            <input class="user user-name" type="text" name="user_name" maxlength="60" required>
+                        </label>
+                        <label>
+                            Familyangiz
+                            <input class="user user-last_name" type="text" name="user_last_name" maxlength="60" required>
+                        </label>
+                        <label>
+                            Otangizni ismi
+                            <input class="user middlle_name" type="text" name="middlle_name" maxlength="60" required>
+                        </label>
+                        <label class="password-wrap">
+                            Parol
+                            <input class="user user-password" type="password" name="user_password" maxlength="60" required autocomplete="off">
+                            <span class="password-eye"></span>
+                        </label>
+                        <label>
+                            Username
+                            <input class="user user-username" type="text" name="username" maxlength="60" required>
+                        </label>
+                    </div>
+                    <div class="passport-date">
+                        <label class="passport-number">
+                            Passport seriya
+                            <input class="user user-pasport-text" type="text" name="user_passport_text" pattern="[A-Z]{2}" maxlength="2" required>
+                        </label>
+                        <label>
+                            Passport raqam
+                            <input class="user user-pasport-number" type="number" name="user_passport_number" pattern="[0-9]{7}" onKeyPress="if(this.value.length==7) return false;" required>
+                        </label>
+                    </div>
+                    <!-- <input type="file" class="imgFile"> -->
+                    <span class="register-warning">* Kameraga tushmagauncha yuborib bo'lmaydi</span>
+                    <div class="btn-wrap">
+                        <button class="btn cam" type="button">Kamera</button>
+                        <button class="btn send" disabled type="submit">Yuborish</button>
+                    </div>
+                    <div class="form-link">
+                        <span>Ro'yxatdan o'tgan bo'lsangiz</span>
+                        <a class="register-link" href="login.html">Login</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- HERO SECTION FINISH -->
+    </main>
+    <!-- SITE MAIN FINISH -->
+    
+    <!-- SITE FOOTER START -->
+    <footer class="site-footer">
+        <img class="imagess" src="" alt="">
+        
+    </footer>
+    <!-- SITE FOOTER FINISH -->
+    <div class="overlay-wrap">
+    </div>
+        <div class="vedio-wrap">
+            <video width="450" height="450" onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
+            <canvas id="overlay"></canvas>
+            <span class="vedio-warning"></span>
+        </div>
+    <!-- <script src="./node_modules/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./js/register.js"></script>
+</body>
+</html>

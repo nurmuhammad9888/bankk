@@ -1,0 +1,279 @@
+/* GENERAL */
+*{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    height: auto;
+}
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "", "Arial", sans-serif;
+}
+.body-hidden{
+    overflow: hidden;
+    /* position: fixed; */
+}
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* CONTAINER */
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* STICKY-FOOTER */
+.site-main{
+    display: flex;
+    flex-grow: 1;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+}
+.hero-left{
+    width: 100%;
+    max-width: 468px;
+    background: linear-gradient(180deg, #36C3FA -2.7%, #3648C5 -2.69%, #3644C3 89.71%);
+    background-blend-mode: darken;
+    box-shadow: 0px 4px 140px 0px rgba(54, 72, 197, 0.25);
+}
+.user-form {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px 20px 30px 45px;
+    max-width: 470px;
+    width: 100%;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 35px 0px rgba(41, 82, 144, 0.25);
+}
+.form-title{
+    margin: 0 0 15px 0;
+    /* padding-top: 40px; */
+}
+.user-info label{
+    width: 100%;
+    max-width: 355px;
+    margin: 10px 0 15px 0;
+    display: block;
+}
+.user {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 355px;
+    height: 37px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #B5B5B5;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+.password-wrap{
+    position: relative;
+}
+.password-eye{
+    position: absolute;
+    top: 38px;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    background-image: url("./crossed-eye.png");
+    background-size: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.password-eye-close{
+    background-image: url("./eye.png");
+}
+.passport-date{
+    display: flex;
+}
+.passport-date label{
+    font-size: 14px;
+}
+.passport-date label:nth-child(2){
+    font-size: 14px;
+    width: 100%;
+    max-width: 240px;
+}
+.user-pasport-text {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 80px;
+    height: 37px;
+}
+.passport-number{
+    margin-right: 15px;
+}
+.user-pasport-number {
+    margin-top: 10px;
+    height: 37px;
+}
+.login-warning,
+.user-warning{
+    color: #ce4a4a;
+    font-weight: bold;
+    font-size: 13px;
+}
+.btn-wrap{
+    margin-top: 20px;
+}
+.btn{
+    border: none;
+    width: 120px;
+    height: 37px;
+    border-radius: 5px;
+    border: 1px solid #B5B5B5;
+    background: #107DDB;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.52px;
+    cursor: pointer;
+}
+.cam{
+    background: #46515c;
+    margin-right: 15px;
+}
+.send:disabled{
+    background-color: #107cdb60;
+}
+.register-warning{
+    margin-top: 10px;
+    display: block;
+    color: #ce4a4a;
+}
+
+/* CAMERA  */
+.vedio-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 11;
+}
+.overlay-wrap-ative{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1;
+    background-color: #46515c;
+    overflow: hidden;
+}
+video {
+    position: absolute;
+    z-index: 12;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+}
+#overlay {
+    position: relative;
+    z-index: 20;
+    width: 450px;
+    height: 450px;
+}
+.vedio-warning{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 22;
+    background-color: #107DDB;
+}
+
+
+/* LOGIN  */
+.register-link{
+    margin-left: 12px;
+}
+.form-link{
+    margin-top: 25px;
+    display: flex;
+}
+
+@media only screen and (max-width:968px) {
+    .hero-left{
+        display: none;
+    }
+    .user-form {
+        max-width: 458px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:497px) {
+    .user-form {
+        padding: 25px 20px 25px 20px;
+        margin-top: 60px;
+    }
+    
+}
+@media only screen and (max-width:420px) {
+    .passport-date{
+        display: block;
+    }
+    .passport-date label:nth-child(2){
+        margin-top: 20px;
+        display: block;
+    }
+    .passport-number{
+        margin-top: 20px;
+        margin-right:0;
+    }
+    video {
+        width: 360px;
+        height: 360px;
+    }
+    #overlay {
+        width: 360px;
+        height: 360px;
+    }
+}
+@media only screen and (max-width:320px) {
+    
+    .send{
+        margin-top: 5px;
+    }
+}
